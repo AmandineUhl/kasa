@@ -1,0 +1,76 @@
+.banner {
+    position: relative;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    img {
+      height: 111px;
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      filter: brightness(60%);
+      
+  
+      @include desktop {
+        height: 223px;
+        border-radius: 25px;
+      }
+    }
+  }
+  
+  .banner::before {
+    position: absolute;
+    content: "Chez vous, partout et ailleurs";
+    font-size: 24px;
+    color: white;
+    z-index: 1;
+    width: 65%;
+    top: 1.5rem;
+    left: 1.5rem;
+  
+    @include desktop {
+      font-size: 48px;
+      top: 5rem;
+      left: 15rem;
+    }
+  }
+
+  .gallery {
+    margin-left: 15px;
+    margin-right: 15px;
+    
+    @include desktop {
+        background-color: #f6f6f6;
+        border-radius: 25px;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding: 30px;
+        
+    }
+}
+
+.card {
+  background: linear-gradient(0deg, rgba(136,54,54,1) 0%, rgba(255,96,96,1) 50%);
+  height: 255px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  @include desktop {
+    height: 340px;
+    width: 340px;
+    
+  }
+  
+  .card_title {
+    color: white;
+    height: 95%;
+    display: flex;
+    align-items: flex-end;
+    width: 30%;
+    margin-left: 15px;
+    
+  }
+}
