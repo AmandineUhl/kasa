@@ -124,6 +124,10 @@ body {
   margin-left: 15px;
 }
 
+.apartment img {
+  height: 415px;
+}
+
 .error_page {
   display: flex;
   flex-direction: column;

@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Card() {
   return (
     <div>
       <div className="card">
-        <div className="card_title">Titre de la location</div>
+        <Link to="/apartment" className="card_title">Titre de la location</Link>
       </div>
     </div>
   );
