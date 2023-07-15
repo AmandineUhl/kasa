@@ -124,6 +124,38 @@ body {
   margin-left: 15px;
 }
 
+.error_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #FF6060;
+}
+.error_page h1 {
+  font-size: 160px;
+}
+@media screen and (min-width: 768px) {
+  .error_page h1 {
+    font-size: 290px;
+    margin: 0;
+  }
+}
+.error_page h2 {
+  font-size: 18px;
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .error_page h2 {
+    font-size: 36px;
+  }
+}
+.error_page a {
+  margin-top: 3rem;
+  margin-bottom: 1.7rem;
+  text-decoration: underline;
+  color: #FF6060;
+}
+
 .footer {
   height: 209px;
   width: 100%;
