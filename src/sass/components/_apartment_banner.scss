@@ -54,17 +54,18 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        
 
         @include desktop {
             font-size: 18px;
             margin-bottom: 4rem;
         }
 
-        div {
+        img {
             height: 32px;
             width: 32px;
             border-radius: 50%;
-            background-color: grey;
+            
 
             @include desktop {
                 height: 64px;

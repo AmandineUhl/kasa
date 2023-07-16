@@ -148,14 +148,13 @@ body {
     margin-bottom: 4rem;
   }
 }
-.apartment_tenant h3 div {
+.apartment_tenant h3 img {
   height: 32px;
   width: 32px;
   border-radius: 50%;
-  background-color: grey;
 }
 @media screen and (min-width: 768px) {
-  .apartment_tenant h3 div {
+  .apartment_tenant h3 img {
     height: 64px;
     width: 64px;
     margin-left: 10px;

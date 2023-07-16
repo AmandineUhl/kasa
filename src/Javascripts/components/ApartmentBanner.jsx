@@ -1,40 +1,36 @@
 import React from "react";
 
-function Apartment_banner() {
+function Apartment_banner(props) {
+  //console.log(props);
   return (
     <div>
       <div className="apartment_caroussel">
-        <img src="./images/banner.jpg" alt="" />
+        <img src={props.cover} alt="" />
       </div>
       <div className="apartment_presentation">
-        <h1>Crazy loft on canal Saint martin</h1>
-        <h2>Paris, ile de france</h2>
+        <h1>{props.title}</h1>
+        <h2>{props.location}</h2>
       </div>
       <div className="apartment_badges">
-        <span>Cozy</span>
-        <span>Canal</span>
-        <span>Paris 10</span>
+        {props.tags.map(tag => (
+          <span>{tag}</span>
+        ))}
       </div>
       <div className="apartment_tenant">
         <div className="apartment_tenant_stars">
-          <span>
-            <i className="fa-solid fa-star" style={{ color: "#FF6060" }}></i>
-          </span>
-          <span>
-            <i className="fa-solid fa-star" style={{ color: "#FF6060" }}></i>
-          </span>
-          <span>
-            <i className="fa-solid fa-star" style={{ color: "#FF6060" }}></i>
-          </span>
-          <span>
-            <i className="fa-solid fa-star" style={{ color: "#b0baba" }}></i>
-          </span>
-          <span>
-            <i className="fa-solid fa-star" style={{ color: "#b0baba" }}></i>
-          </span>
+          {[1, 2, 3, 4, 5].map(num => (
+            <span key={num}>
+              <i
+                style={{
+                  color: props.rating >= num ? "#FF6060" : "#b0baba",
+                }}
+                className="fa-solid fa-star"
+              ></i>
+            </span>
+          ))}
         </div>
         <h3>
-          Alexandre <br /> Dumas <div></div>
+          {props.host.name} <img src={props.host.picture} />
         </h3>
       </div>
     </div>
