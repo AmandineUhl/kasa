@@ -1,0 +1,76 @@
+.apartment_presentation {
+    h1 {
+        font-size: 18px;
+
+        @include desktop {
+            font-size: 36px;
+        }
+    }
+
+    h2 {
+        font-size: 14px;
+
+        @include desktop {
+            font-size: 18px;
+        }
+    }
+}
+
+.apartment_badges {
+    span {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 84px;
+        height: 18px;
+        font-size: 10px;
+        background-color: $main_color;
+        color: white;
+        border-radius: 10px;
+        margin-right: 10px;
+
+        @include desktop {
+            width: 115px;
+            height: 25px;
+            font-size: 14px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.apartment_tenant {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include desktop {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        margin-top: -12rem;
+    }
+
+    h3 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @include desktop {
+            font-size: 18px;
+            margin-bottom: 4rem;
+        }
+
+        div {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            background-color: grey;
+
+            @include desktop {
+                height: 64px;
+                width: 64px;
+                margin-left: 10px;
+            }
+        }
+    }
+}

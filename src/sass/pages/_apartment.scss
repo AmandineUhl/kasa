@@ -1,6 +1,30 @@
 .apartment {
-    img {
-        height: 415px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: $main_color;
 
+    @include desktop {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    img {
+        height: 255px;
+        border-radius: 10px;
+        width: 100%;
+        object-fit: cover;
     }
 }
+
+.collapse {
+    margin-top: 2.5rem;
+    width: 100%;
+
+    @include desktop {
+        display: flex;
+        gap: 40px;
+    }
+}
+
+
+

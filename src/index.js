@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./sass/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import App from "./Javascripts/Pages/App";
+import HomePage from "./Javascripts/Pages/HomePage";
 import Apartment from "./Javascripts/Pages/Apartment";
 import About from "./Javascripts/Pages/About";
 import Error from "./Javascripts/Pages/Error";
@@ -16,7 +16,7 @@ root.render(
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/apartment" element={<Apartment />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />

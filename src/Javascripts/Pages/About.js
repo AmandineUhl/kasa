@@ -1,4 +1,6 @@
 import React from 'react'
+import Collapse from '../components/Collapse'
+import Banner from '../components/Banner'
 
 
 
@@ -6,7 +8,11 @@ import React from 'react'
 function About() {
   return (
     <div>
-     
+     <Banner/>
+     <Collapse/>
+     <Collapse/>
+     <Collapse/>
+     <Collapse/>
     </div>
   )
 }

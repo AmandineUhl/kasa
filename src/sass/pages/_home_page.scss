@@ -1,39 +1,4 @@
-.banner {
-    position: relative;
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-bottom: 15px;
-    img {
-      height: 111px;
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-      filter: brightness(60%);
-      
-  
-      @include desktop {
-        height: 223px;
-        border-radius: 25px;
-      }
-    }
-  }
-  
-  .banner::before {
-    position: absolute;
-    content: "Chez vous, partout et ailleurs";
-    font-size: 24px;
-    color: white;
-    z-index: 1;
-    width: 65%;
-    top: 1.5rem;
-    left: 1.5rem;
-  
-    @include desktop {
-      font-size: 48px;
-      top: 5rem;
-      left: 15rem;
-    }
-  }
+
 
   .gallery {
     margin-left: 15px;

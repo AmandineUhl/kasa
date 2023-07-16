@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 
-function Apartments() {
+function gallery() {
   return (
     <div className="gallery">
       <Card />
@@ -14,4 +14,4 @@ function Apartments() {
   );
 }
 
-export default Apartments;
+export default gallery;

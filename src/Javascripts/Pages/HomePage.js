@@ -1,12 +1,12 @@
 import React from "react";
 import Banner from "../components/Banner";
-import Apartments from "../components/Apartments";
+import Gallery from "../components/Gallery";
 
 function App() {
   return (
     <div>
       <Banner />
-      <Apartments />
+      <Gallery />
     </div>
   );
 }
