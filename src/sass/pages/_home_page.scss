@@ -1,5 +1,4 @@
 
-
   .gallery {
     margin-left: 15px;
     margin-right: 15px;
@@ -18,24 +17,22 @@
     }
 }
 
-.card {
-  background: linear-gradient(0deg, rgba(136,54,54,1) 0%, rgba(255,96,96,1) 50%);
-  height: 255px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  @include desktop {
-    height: 340px;
-    width: 340px;
+.home_page {
+  position: relative;
+  &_title {
+    position: absolute;
     
-  }
-  
-  .card_title {
     color: white;
-    height: 95%;
-    display: flex;
-    align-items: flex-end;
-    width: 30%;
-    margin-left: 15px;
     
+    width: 50%;
+    top: 2rem;
+    left: 2rem;
+  
+    @include desktop {
+      width: 100%;
+      font-size: 48px;
+      text-align: center;
+    }
   }
+
 }
