@@ -21,7 +21,7 @@ function Apartment() {
     fetchFlat();
   }, [fetchFlat]);
 
-  if (selectFlat == null) return <div>...Loding</div>;
+  if (selectFlat == null) return <div>...Lodding</div>;
 
   return (
     <div className="apartment">

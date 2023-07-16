@@ -30,7 +30,7 @@ function Apartment_banner(props) {
           ))}
         </div>
         <h3>
-          {props.host.name} <img src={props.host.picture} />
+          {props.host.name} <img src={props.host.picture} alt="" />
         </h3>
       </div>
     </div>
