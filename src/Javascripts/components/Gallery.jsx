@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react"; 
 import Card from "./Card";
 
-function gallery() {
+function Gallery() { 
+  const [apartments, setApartments] = useState([]);
+
+  useEffect(() => {
+    fetchApartments();
+  }, []);
+
+  function fetchApartments() {
+    fetch('GalleryData.json')
+      .then(res => res.json())
+      .then(res => setApartments(res))
+      .catch(console.error);
+  }
+
   return (
     <div className="gallery">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {apartments.map(flat => (
+        <Card key={flat.id} id={flat.id} title={flat.title} image={flat.cover}/> 
+      ))}
     </div>
   );
 }
 
-export default gallery;
+export default Gallery; 

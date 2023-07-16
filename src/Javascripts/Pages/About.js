@@ -1,8 +1,7 @@
 import React from 'react'
 import Collapse from '../components/Collapse'
 import Banner from '../components/Banner'
-import backgroundImage from "../assets/apartmentbanner.png";
-
+import backgroundImage from "../assets/bannerflat.jpg";
 
 
 

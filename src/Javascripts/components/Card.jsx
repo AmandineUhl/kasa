@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Card() {
+function Card(props) {
+
+  const state = {
+    flatId : props.id
+  }
+
   return (
     <div>
       <div className="card">
-        <Link to="/apartment" className="card_title">Titre de la location</Link>
+        <img src={props.image} alt="" />
+        <Link to="/apartment" state= {props.id} className="card_title">{props.title}</Link>
       </div>
     </div>
   );
