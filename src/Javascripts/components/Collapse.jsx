@@ -1,22 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-function Collapse() {
+
+function Collapse(props) {
+  const [isContentVisible, setIsContentVisible] = useState(false);
+
+  const handleToggleContent = () => {
+    setIsContentVisible((prevIsVisible) => !prevIsVisible);
+  };
+
   return (
-    
-    <div className="collapse_description">
-      <div className="collapse_description_title">
-        <span>Description</span>
-        <i className="fa-solid fa-chevron-up"></i>
+    <div className={`collapse_description ${isContentVisible ? 'open' : ''}`}>
+      <div className="collapse_description_title" onClick={handleToggleContent}>
+        <span>{props.title}</span>
+        <i
+          className={`fa-solid fa-chevron-up ${isContentVisible ? 'rotate-chevron' : ''}`}
+        ></i>
       </div>
       <div className="collapse_description_content">
-        <p>
-          fihez iohf eziohf oifehz fhezohfoh ez ezfh ohfezoi ehfmhzhf ogrm
-          egoi mj mhr gmh ermg g rmzgh h iorhg ozhùi
-        </p>
+        {Array.isArray(props.content) ? (
+          <ul>
+            {props.content.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>{props.content}</p>
+        )}
       </div>
     </div>
-  
-  )
+  );
 }
 
-export default Collapse
+export default Collapse;

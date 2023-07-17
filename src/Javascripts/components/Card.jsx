@@ -10,8 +10,10 @@ function Card(props) {
   return (
     <div>
       <div className="card">
-        <img src={props.image} alt="" />
-        <Link to="/apartment" state= {state} className="card_title">{props.title}</Link>
+        <Link to="/apartment" state={state}>
+          <img src={props.image} alt="" />
+          <h2 className="card_title">{props.title}</h2>
+        </Link>
       </div>
     </div>
   );

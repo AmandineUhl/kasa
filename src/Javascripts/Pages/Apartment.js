@@ -27,8 +27,8 @@ function Apartment() {
     <div className="apartment">
       <ApartmentBanner {...selectFlat} />
       <div className="collapse">
-        <Collapse />
-        <Collapse />
+        <Collapse title="Description" content={selectFlat.description} />
+        <Collapse title="Equipements" content={selectFlat.equipments}/>
       </div>
     </div>
   );
