@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Collapse from "../components/Collapse";
-import ApartmentBanner from "../components/ApartmentBanner";
+import ApartmentPresentation from "../components/ApartmentPresentation";
+import Carousel from "../components/Carousel";
 import { useLocation } from "react-router-dom";
 
 function Apartment() {
@@ -25,7 +26,8 @@ function Apartment() {
 
   return (
     <div className="apartment">
-      <ApartmentBanner {...selectFlat} />
+      <Carousel pictures = {selectFlat.pictures}/>
+      <ApartmentPresentation {...selectFlat} />
       <div className="collapse">
         <Collapse title="Description" content={selectFlat.description} />
         <Collapse title="Equipements" content={selectFlat.equipments}/>

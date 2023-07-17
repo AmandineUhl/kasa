@@ -1,0 +1,33 @@
+.apartment_carousel {
+    position: relative;
+    
+    i {
+        position: absolute;
+        font-size: 38px;
+        color: white;
+        cursor: pointer;
+        @include desktop {
+            font-size: 60px;
+        }
+    }
+
+    .arrow_left {
+        top:40%;
+        left:5%;
+    }
+    .arrow_right {
+        top:40%;
+        right:5%;
+    }
+
+    img {
+        object-fit: contain;  
+    }
+    .carousel_counter {
+        position: absolute;
+        bottom: 8%;
+        left: 50%;
+        color: white;
+        font-size: 20px;
+    }
+}

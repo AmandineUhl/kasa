@@ -1,27 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Apartment_banner(props) {
-  const [carousel, setCarousel] = useState(0);
-
-  const prevImage = () => {
-    setCarousel((prevIndex) =>
-      prevIndex === 0 ? props.pictures.length - 1 : prevIndex - 1
-    );
-  };
-
-  const nextImage = () => {
-    setCarousel((prevIndex) =>
-      prevIndex === props.pictures.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
+function Apartment_presentation(props) {
+  
   return (
     <div>
-      <div className="apartment_caroussel">
-        <i className="fas fa-chevron-left arrow_left" onClick={prevImage}></i>
-        <img src={props.pictures[carousel]} alt="" />
-        <i className="fas fa-chevron-right arrow_right" onClick={nextImage}></i>
-      </div>
       <div className="apartment_presentation">
         <h1>{props.title}</h1>
         <h2>{props.location}</h2>
@@ -52,4 +34,4 @@ function Apartment_banner(props) {
   );
 }
 
-export default Apartment_banner;
+export default Apartment_presentation;
