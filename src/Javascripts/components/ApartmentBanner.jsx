@@ -1,24 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Apartment_banner(props) {
-  //console.log(props);
+  const [carousel, setCarousel] = useState(0);
+
+  const prevImage = () => {
+    setCarousel((prevIndex) =>
+      prevIndex === 0 ? props.pictures.length - 1 : prevIndex - 1
+    );
+  };
+
+  const nextImage = () => {
+    setCarousel((prevIndex) =>
+      prevIndex === props.pictures.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
     <div>
       <div className="apartment_caroussel">
-        <img src={props.cover} alt="" />
+        <i className="fas fa-chevron-left arrow_left" onClick={prevImage}></i>
+        <img src={props.pictures[carousel]} alt="" />
+        <i className="fas fa-chevron-right arrow_right" onClick={nextImage}></i>
       </div>
       <div className="apartment_presentation">
         <h1>{props.title}</h1>
         <h2>{props.location}</h2>
       </div>
       <div className="apartment_badges">
-        {props.tags.map(tag => (
-          <span>{tag}</span>
+        {props.tags.map((tag) => (
+          <span key={tag}>{tag}</span>
         ))}
       </div>
       <div className="apartment_tenant">
         <div className="apartment_tenant_stars">
-          {[1, 2, 3, 4, 5].map(num => (
+          {[1, 2, 3, 4, 5].map((num) => (
             <span key={num}>
               <i
                 style={{
