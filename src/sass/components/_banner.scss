@@ -1,21 +1,18 @@
 .banner {
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-bottom: 15px;
-    img {
-      height: 111px;
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-      filter: brightness(60%);
-      
-  
-      @include desktop {
-        height: 223px;
-        border-radius: 25px;
-  
-      }
+  margin: 3rem;
+
+  img {
+    height: 111px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    filter: brightness(60%);
+
+
+    @include desktop {
+      height: 223px;
+      border-radius: 25px;
+
     }
   }
-  
-  
+}

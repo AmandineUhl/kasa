@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Carousel(props) {
   const [carousel, setCarousel] = useState(0);
@@ -15,8 +15,18 @@ function Carousel(props) {
     );
   };
 
-
   const showCounterAndArrow = props.pictures.length > 1;
+
+  useEffect(() => {
+    let interval;
+    
+    if (showCounterAndArrow) {
+      interval = setInterval(nextImage, 3000); 
+    }
+    return () => {
+      clearInterval(interval);
+    };
+  }, [showCounterAndArrow]);
 
   return (
     <div className="apartment_carousel">
@@ -30,7 +40,6 @@ function Carousel(props) {
         <i className="fas fa-chevron-right arrow_right" onClick={nextImage}></i>
       )}
 
-
       {showCounterAndArrow && (
         <div className="carousel_counter">
           {carousel + 1} / {props.pictures.length}
@@ -41,4 +50,3 @@ function Carousel(props) {
 }
 
 export default Carousel;
-

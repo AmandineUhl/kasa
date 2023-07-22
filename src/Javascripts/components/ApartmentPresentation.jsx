@@ -2,6 +2,12 @@ import React from "react";
 
 function Apartment_presentation(props) {
   
+const fullName = props.host.name;
+
+const [firstName, lastName] = fullName.split(' ');
+
+
+
   return (
     <div>
       <div className="apartment_presentation">
@@ -26,9 +32,10 @@ function Apartment_presentation(props) {
             </span>
           ))}
         </div>
-        <h3>
-          {props.host.name} <img src={props.host.picture} alt="" />
-        </h3>
+        <div className="host">
+        <h3> <p>{firstName}</p> <p>{lastName}</p> </h3>
+        <img src={props.host.picture} alt="" />
+        </div>
       </div>
     </div>
   );

@@ -1,34 +1,36 @@
+.gallery {
+  margin-left: 15px;
+  margin-right: 15px;
 
-  .gallery {
-    margin-left: 15px;
-    margin-right: 15px;
-    
-    @include desktop {
-        background-color: #f6f6f6;
-        border-radius: 25px;
-        margin-top: 4rem;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap:3rem;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-  
-    }
+  @include desktop {
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
 }
 
 .home_page {
   position: relative;
+
   &_title {
     position: absolute;
     color: white;
     width: 50%;
+    font-size: 18px;
     top: 2rem;
     left: 2rem;
-  
+
     @include desktop {
-      width: 100%;
+      width: 85%;
       font-size: 48px;
       text-align: center;
     }

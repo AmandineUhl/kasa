@@ -5,7 +5,7 @@ import backgroundImage from "../assets/bannerflat.jpg";
 
 function About() {
   return (
-    <div>
+    <div className="about">
       <Banner backgroundImage={backgroundImage} />
       <div className="about_collapses">
         <Collapse

@@ -4,8 +4,10 @@
     align-items: center;
     text-align: center;
     color: $main_color;
+
     h1 {
         font-size: 160px;
+
         @include desktop {
             font-size: 290px;
             margin: 0;
@@ -15,10 +17,12 @@
     h2 {
         font-size: 18px;
         margin-bottom: 4rem;
+
         @include desktop {
             font-size: 36px;
         }
     }
+
     a {
         margin-top: 3rem;
         margin-bottom: 1.7rem;
