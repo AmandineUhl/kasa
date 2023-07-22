@@ -1,5 +1,8 @@
 .banner {
-  margin: 3rem;
+  margin: 20px;
+  @include desktop {
+    margin: 3rem;
+  }
 
   img {
     height: 111px;
