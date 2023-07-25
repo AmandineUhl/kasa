@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
 
 function Collapse(props) {
   const [isContentVisible, setIsContentVisible] = useState(false);
@@ -9,11 +8,13 @@ function Collapse(props) {
   };
 
   return (
-    <div className={`collapse_description ${isContentVisible ? 'open' : ''}`}>
+    <div className={`collapse_description ${isContentVisible ? "open" : ""}`}>
       <div className="collapse_description_title" onClick={handleToggleContent}>
         <span>{props.title}</span>
         <i
-          className={`fa-solid fa-chevron-up ${isContentVisible ? 'rotate-chevron' : ''}`}
+          className={`fa-solid fa-chevron-up ${
+            isContentVisible ? "rotate-chevron" : ""
+          }`}
         ></i>
       </div>
       <div className="collapse_description_content">

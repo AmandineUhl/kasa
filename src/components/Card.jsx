@@ -2,15 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Card(props) {
-
-  const state = {
-    flatId : props.id
-  }
-
   return (
     <div>
       <div className="card">
-        <Link to="/apartment" state={state}>
+        <Link
+          to={{
+            pathname: `/apartment/${props.id}`,
+            state: { flatId: props.id },
+          }}
+        >
           <img src={props.image} alt="" />
           <h2 className="card_title">{props.title}</h2>
         </Link>

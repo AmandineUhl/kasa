@@ -6,10 +6,10 @@ import backgroundImage from "../assets/banner.jpg";
 function HomePage() {
   return (
     <div className="home_page">
-      <Banner backgroundImage={backgroundImage}/>
+      <Banner backgroundImage={backgroundImage} />
       <div className="home_page_title">
-          <p>Chez vous, partout et ailleurs</p>
-        </div>
+        <p>Chez vous, partout et ailleurs</p>
+      </div>
       <Gallery />
     </div>
   );

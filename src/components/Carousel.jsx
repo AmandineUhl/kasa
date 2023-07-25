@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from "react";
 
 function Carousel(props) {
   const [carousel, setCarousel] = useState(0);
@@ -9,24 +9,24 @@ function Carousel(props) {
     );
   };
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     setCarousel((prevIndex) =>
       prevIndex === props.pictures.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [props.pictures]);
 
   const showCounterAndArrow = props.pictures.length > 1;
 
   useEffect(() => {
     let interval;
-    
+
     if (showCounterAndArrow) {
-      interval = setInterval(nextImage, 3000); 
+      interval = setInterval(nextImage, 3000);
     }
     return () => {
       clearInterval(interval);
     };
-  }, [showCounterAndArrow]);
+  }, [showCounterAndArrow, nextImage]);
 
   return (
     <div className="apartment_carousel">
